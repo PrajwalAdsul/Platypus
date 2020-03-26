@@ -1,0 +1,61 @@
+{
+  "homepage": "http://prajwaladsul.github.io/Platypus",
+  "name": "coding-exercise",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@material-ui/core": "^4.8.1",
+    "@material-ui/icons": "^4.5.1",
+    "axios": "^0.18.1",
+    "bcryptjs": "^2.4.3",
+    "bootstrap": "^3.4.1",
+    "classnames": "^2.2.6",
+    "cors": "^2.8.5",
+    "express": "4.16.4",
+    "google-maps-react": "^2.0.2",
+    "javascript-terminal": "^1.0.3",
+    "material-ui": "^0.20.2",
+    "mongoose": "^5.8.3",
+    "nodemon": "^2.0.2",
+    "papaparse": "^5.1.1",
+    "react": "^16.12.0",
+    "react-bootstrap": "^1.0.0-beta.16",
+    "react-csv-reader": "^2.0.2",
+    "react-dom": "16.7.0",
+    "react-file-manager": "^1.2.4",
+    "react-file-reader": "^1.1.4",
+    "react-router-dom": "4.3.1",
+    "react-scripts": "^3.3.0",
+    "react-terminal-component": "^1.4.1",
+    "recharts": "^2.0.0-beta.1",
+    "terminal-in-react": "^4.3.1",
+    "victory": "^34.0.1",
+    "babel-eslint": "10.1.0",
+    "babel-jest": "^24.9.0",
+    "babel-loader": "8.1.0",
+    "eslint": "^6.6.0",
+    "jest": "24.9.0",
+    "webpack": "4.42.0",
+    "webpack-dev-server": "3.10.3"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "devDependencies": {
+    "gh-pages": "^2.2.0"
+  }
+}

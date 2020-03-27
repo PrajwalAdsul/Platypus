@@ -30,7 +30,7 @@ export default class Memory extends Component {
   }
 
     componentDidMount() {
-        axios.get('http://' + localStorage.getItem('secret_key') + '.ngrok.io/' + 'memory')
+        axios.get('https://' + localStorage.getItem('secret_key') + '.ngrok.io/' + 'memory')
             .then(response => {
                 this.setState({
                     allProcesses : response.data

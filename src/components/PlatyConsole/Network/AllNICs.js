@@ -22,7 +22,7 @@ export default class AllNICs extends Component {
   }
 
     componentDidMount() {
-        axios.get('http://' + localStorage.getItem('secret_key') + '.ngrok.io/' + 'allNICs')
+        axios.get('https://' + localStorage.getItem('secret_key') + '.ngrok.io/' + 'allNICs')
             .then(response => {
                 this.setState({
                     allNICs : response.data

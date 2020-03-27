@@ -126,7 +126,7 @@ class PlatyRun extends React.Component {
 			// filename : this.state.filename
 		};
 		console.log(data);
-		await axios.post('http://' + localStorage.getItem('secret_key') + '.ngrok.io/' + 'startprocess', data)
+		await axios.post('https://' + localStorage.getItem('secret_key') + '.ngrok.io/' + 'startprocess', data)
 		.then((response) => {
 			console.log(response)
 			 this.setState({
@@ -144,7 +144,7 @@ class PlatyRun extends React.Component {
 			atime : this.state.starttime,
 		};
 		console.log(data);
-		await axios.post('http://' + localStorage.getItem('secret_key') + '.ngrok.io/' + 'startprocessaftermins', data)
+		await axios.post('https://' + localStorage.getItem('secret_key') + '.ngrok.io/' + 'startprocessaftermins', data)
 		.then((response) => {
 			console.log(response)
 			 this.setState({
@@ -161,7 +161,7 @@ class PlatyRun extends React.Component {
 			attime : this.state.attime,
 		};
 		console.log(data);
-		await axios.post('http://' + localStorage.getItem('secret_key') + '.ngrok.io/' + 'startprocessattime', data)
+		await axios.post('https://' + localStorage.getItem('secret_key') + '.ngrok.io/' + 'startprocessattime', data)
 		.then((response) => {
 			console.log(response)
 			 this.setState({
@@ -180,7 +180,7 @@ class PlatyRun extends React.Component {
 			processname : this.state.processnameforcheck,
 		};
 		console.log(data);
-		await axios.post('http://' + localStorage.getItem('secret_key') + '.ngrok.io/' + 'checkprocess', data)
+		await axios.post('https://' + localStorage.getItem('secret_key') + '.ngrok.io/' + 'checkprocess', data)
 		.then((response) => {
 			console.log(response)
 			 this.setState({
@@ -206,7 +206,7 @@ class PlatyRun extends React.Component {
 			// filename : this.state.filename
 		};
 		console.log(data);
-		await axios.post('http://' + localStorage.getItem('secret_key') + '.ngrok.io/' + 'sendsignal', data)
+		await axios.post('https://' + localStorage.getItem('secret_key') + '.ngrok.io/' + 'sendsignal', data)
 		.then((response) => {
 			console.log(response)
 			 this.setState({
@@ -232,7 +232,7 @@ class PlatyRun extends React.Component {
 			// filename : this.state.filename
 		};
 		console.log(data);
-		await axios.post('http://' + localStorage.getItem('secret_key') + '.ngrok.io/' + 'terminateprocess', data)
+		await axios.post('https://' + localStorage.getItem('secret_key') + '.ngrok.io/' + 'terminateprocess', data)
 		.then((response) => {
 			console.log(response)
 			 this.setState({
@@ -250,7 +250,7 @@ class PlatyRun extends React.Component {
 	shutdownnow = async e => {
 			
 		console.log('shutdown');
-		await axios.post('http://' + localStorage.getItem('secret_key') + '.ngrok.io/' + 'shutdownnow')
+		await axios.post('https://' + localStorage.getItem('secret_key') + '.ngrok.io/' + 'shutdownnow')
 		.then((response) => {
 			console.log(response)
 			 this.setState({
@@ -267,7 +267,7 @@ class PlatyRun extends React.Component {
 			// filename : this.state.filename
 		};
 		console.log('shutdown after min');
-		await axios.post('http://' + localStorage.getItem('secret_key') + '.ngrok.io/' + 'shutdownaftermin', data)
+		await axios.post('https://' + localStorage.getItem('secret_key') + '.ngrok.io/' + 'shutdownaftermin', data)
 		.then((response) => {
 			console.log(response)
 			 this.setState({
@@ -284,7 +284,7 @@ class PlatyRun extends React.Component {
 			// filename : this.state.filename
 		};
 		console.log('shutdown after min');
-		await axios.post('http://' + localStorage.getItem('secret_key') + '.ngrok.io/' + 'shutdownattime', data)
+		await axios.post('https://' + localStorage.getItem('secret_key') + '.ngrok.io/' + 'shutdownattime', data)
 		.then((response) => {
 			console.log(response)
 			 this.setState({
@@ -297,7 +297,7 @@ class PlatyRun extends React.Component {
 	shutdowncancel = async e => {
 	
 		console.log('cancel shutdown');
-		await axios.post('http://' + localStorage.getItem('secret_key') + '.ngrok.io/' + 'cancelshutdown')
+		await axios.post('https://' + localStorage.getItem('secret_key') + '.ngrok.io/' + 'cancelshutdown')
 		.then((response) => {
 			console.log(response)
 			 this.setState({
@@ -309,7 +309,7 @@ class PlatyRun extends React.Component {
 	restartsystem = async e => {
 	
 		console.log('restart');
-		await axios.post('http://' + localStorage.getItem('secret_key') + '.ngrok.io/' + 'restartsystem')
+		await axios.post('https://' + localStorage.getItem('secret_key') + '.ngrok.io/' + 'restartsystem')
 		.then((response) => {
 			console.log(response)
 			 this.setState({
@@ -320,7 +320,7 @@ class PlatyRun extends React.Component {
 	rebootsystem = async e => {
 	
 		console.log('reboot');
-		await axios.post('http://' + localStorage.getItem('secret_key') + '.ngrok.io/' + 'rebootsystem')
+		await axios.post('https://' + localStorage.getItem('secret_key') + '.ngrok.io/' + 'rebootsystem')
 		.then((response) => {
 			console.log(response)
 			 this.setState({
@@ -332,7 +332,7 @@ class PlatyRun extends React.Component {
 	suspendsystem = async e => {
 	
 		console.log('suspend');
-		await axios.post('http://' + localStorage.getItem('secret_key') + '.ngrok.io/' + 'suspendsystem')
+		await axios.post('https://' + localStorage.getItem('secret_key') + '.ngrok.io/' + 'suspendsystem')
 		.then((response) => {
 			console.log(response)
 			 this.setState({
@@ -344,7 +344,7 @@ class PlatyRun extends React.Component {
 	hibernatesystem = async e => {
 	
 		console.log('hibernate');
-		await axios.post('http://' + localStorage.getItem('secret_key') + '.ngrok.io/' + 'hibernatesystem')
+		await axios.post('https://' + localStorage.getItem('secret_key') + '.ngrok.io/' + 'hibernatesystem')
 		.then((response) => {
 			console.log(response)
 			 this.setState({
@@ -356,7 +356,7 @@ class PlatyRun extends React.Component {
 	screenlocksystem = async e => {
 	
 		console.log('screen lock');
-		await axios.post('http://' + localStorage.getItem('secret_key') + '.ngrok.io/' + 'screenlocksystem')
+		await axios.post('https://' + localStorage.getItem('secret_key') + '.ngrok.io/' + 'screenlocksystem')
 		.then((response) => {
 			console.log(response)
 			 this.setState({
@@ -368,7 +368,7 @@ class PlatyRun extends React.Component {
 	logoutsystem = async e => {
 	
 		console.log('logout');
-		await axios.post('http://' + localStorage.getItem('secret_key') + '.ngrok.io/' + 'logoutsystem')
+		await axios.post('https://' + localStorage.getItem('secret_key') + '.ngrok.io/' + 'logoutsystem')
 		.then((response) => {
 			console.log(response)
 			 this.setState({

@@ -27,7 +27,7 @@ export default class PlatyTerminal extends Component {
 				    if(cmd[0] == "path"){
 				    	const data = {'command' : 'pwd'}
 				    	var path = '';
-				    	axios.post('http://' + localStorage.getItem('secret_key') + '.ngrok.io/' + 'shell', data)
+				    	axios.post('https://' + localStorage.getItem('secret_key') + '.ngrok.io/' + 'shell', data)
 						.then(response => {
 							// print(response.data.join('\n'));
 							path += response.data.join(',') + '/';
@@ -37,7 +37,7 @@ export default class PlatyTerminal extends Component {
 							console.log(err.response);
 						});
 						const filename = {'command' : 'ls ' + cmd[1]}
-						axios.post('http://' + localStorage.getItem('secret_key') + '.ngrok.io/' + 'shell', filename)
+						axios.post('https://' + localStorage.getItem('secret_key') + '.ngrok.io/' + 'shell', filename)
 						.then(response => {
 							// print(response.data.join('\n'));
 							path += response.data;
@@ -55,7 +55,7 @@ export default class PlatyTerminal extends Component {
 				    }
 				    else if(cmd[0] == 'get'){
 				    	const data = {'path' : cmd[1]};
-				    	axios.post('http://' + localStorage.getItem('secret_key') + '.ngrok.io/' +'getFile', data)
+				    	axios.post('https://' + localStorage.getItem('secret_key') + '.ngrok.io/' +'getFile', data)
 						.then((response) => {
 						   const url = window.URL.createObjectURL(new Blob([response.data]));
 						   const link = document.createElement('a');
@@ -66,7 +66,7 @@ export default class PlatyTerminal extends Component {
 						});
 				    }
 					else{
-					 	axios.post('http://' + localStorage.getItem('secret_key') + '.ngrok.io/' + 'shell', data)
+					 	axios.post('https://' + localStorage.getItem('secret_key') + '.ngrok.io/' + 'shell', data)
 						.then(response => {
 							print(response.data.join('\n'));
 						})

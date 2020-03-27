@@ -34,7 +34,7 @@ export default class Partitions extends Component {
   }
 
     componentDidMount() {
-        axios.get('http://' + localStorage.getItem('secret_key') + '.ngrok.io/' + 'partitions')
+        axios.get('https://' + localStorage.getItem('secret_key') + '.ngrok.io/' + 'partitions')
             .then(response => {
                 this.setState({
                     allProcesses : response.data

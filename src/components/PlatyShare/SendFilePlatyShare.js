@@ -29,7 +29,7 @@ export default class SendFilePlatyShare extends Component {
   fileUpload = async file => {
   	const formData = new FormData();
   	formData.append('file',file)
-    await axios.post('http://' + localStorage.getItem('secret_key') + '.ngrok.io/' + 'putFile', formData, {
+    await axios.post('https://' + localStorage.getItem('secret_key') + '.ngrok.io/' + 'putFile', formData, {
   	    headers: {
   	      'Content-Type': 'multipart/form-data'
   	    }

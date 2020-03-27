@@ -32,7 +32,7 @@ export default class DiskIOCounters extends Component {
   }
 
     componentDidMount() {
-        axios.get('http://' + localStorage.getItem('secret_key') + '.ngrok.io/' + 'DiskIOCounters')
+        axios.get('https://' + localStorage.getItem('secret_key') + '.ngrok.io/' + 'DiskIOCounters')
             .then(response => {
                 this.setState({
                     allProcesses : response.data

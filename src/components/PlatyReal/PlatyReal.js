@@ -21,7 +21,7 @@ export default class PlatyReal extends Component {
   }
 
     componentDidMount() {
-        axios.get('http://' + localStorage.getItem('secret_key') + '.ngrok.io/' + 'pendrives')
+        axios.get('https://' + localStorage.getItem('secret_key') + '.ngrok.io/' + 'pendrives')
             .then(response => {
                 this.setState({
                     devices : response.data
@@ -34,7 +34,7 @@ export default class PlatyReal extends Component {
             })
 
 	console.log('in submit')
-	axios.get('http://' + localStorage.getItem('secret_key') + '.ngrok.io/' + 'readfile')
+	axios.get('https://' + localStorage.getItem('secret_key') + '.ngrok.io/' + 'readfile')
             .then(response => {
                  this.setState({
 			data: response.data	

@@ -28,7 +28,7 @@ export default class Space extends Component {
 
     componentDidMount() {
         const data = {'device' : this.props.location.state.device}
-        axios.post('http://' + localStorage.getItem('secret_key') + '.ngrok.io/' + 'disk_usage', data)
+        axios.post('https://' + localStorage.getItem('secret_key') + '.ngrok.io/' + 'disk_usage', data)
             .then(response => {
                 this.setState({
                     allProcesses : response.data

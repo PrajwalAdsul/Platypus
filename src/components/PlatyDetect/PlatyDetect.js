@@ -30,7 +30,7 @@ export default class PlatyDetect extends Component {
   }
 
    componentDidMount() {
-        axios.get('http://' + localStorage.getItem('secret_key') + '.ngrok.io/' + 'malwaredetection')
+        axios.get('https://' + localStorage.getItem('secret_key') + '.ngrok.io/' + 'malwaredetection')
             .then(response => {
                 this.setState({
                     data : response.data

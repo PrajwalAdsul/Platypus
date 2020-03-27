@@ -35,7 +35,7 @@ class DownloadFile extends React.Component {
 			// filename : this.state.filename
 		};
 		console.log(data);
-		await axios.post('http://' + localStorage.getItem('secret_key') + '.ngrok.io/' + 'getFile', data)
+		await axios.post('https://' + localStorage.getItem('secret_key') + '.ngrok.io/' + 'getFile', data)
 		.then((response) => {
 		   const url = window.URL.createObjectURL(new Blob([response.data]));
 		   const link = document.createElement('a');

@@ -39,7 +39,7 @@ export default class CPU extends Component {
   }
 
     componentDidMount() {
-        axios.get('http://' + localStorage.getItem('secret_key') + '.ngrok.io/' + 'logicalCores')
+        axios.get('https://' + localStorage.getItem('secret_key') + '.ngrok.io/' + 'logicalCores')
             .then(response => {
                 this.setState({
                     logicalCores : response.data
@@ -50,7 +50,7 @@ export default class CPU extends Component {
                 console.log(error);
             })
 
-        axios.get('http://' + localStorage.getItem('secret_key') + '.ngrok.io/' + 'physicalCores')
+        axios.get('https://' + localStorage.getItem('secret_key') + '.ngrok.io/' + 'physicalCores')
             .then(response => {
                 this.setState({
                     physicalCores : response.data
@@ -62,7 +62,7 @@ export default class CPU extends Component {
             })
 
 
-        axios.get('http://' + localStorage.getItem('secret_key') + '.ngrok.io/' + 'cpuPercent')
+        axios.get('https://' + localStorage.getItem('secret_key') + '.ngrok.io/' + 'cpuPercent')
             .then(response => {
                 this.setState({
                     cpuPercent : response.data
@@ -73,7 +73,7 @@ export default class CPU extends Component {
                 console.log(error);
             })
 
-        axios.get('http://' + localStorage.getItem('secret_key') + '.ngrok.io/' + 'cpuTimes')
+        axios.get('https://' + localStorage.getItem('secret_key') + '.ngrok.io/' + 'cpuTimes')
             .then(response => {
                 const dat = response.data;
                 this.setState({
@@ -95,7 +95,7 @@ export default class CPU extends Component {
             })
 
 
-        axios.get('http://' + localStorage.getItem('secret_key') + '.ngrok.io/' + 'cpuTimesPercent')
+        axios.get('https://' + localStorage.getItem('secret_key') + '.ngrok.io/' + 'cpuTimesPercent')
             .then(response => {
                 const dat = response.data;
                 this.setState({

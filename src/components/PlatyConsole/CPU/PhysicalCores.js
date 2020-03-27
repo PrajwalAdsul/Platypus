@@ -14,7 +14,7 @@ export default class PhysicalCores extends Component {
   }
 
     componentDidMount() {
-        axios.get('http://' + localStorage.getItem('secret_key') + '.ngrok.io/' + 'physicalCores')
+        axios.get('https://' + localStorage.getItem('secret_key') + '.ngrok.io/' + 'physicalCores')
             .then(response => {
                 this.setState({
                     PhysicalCores : response.data

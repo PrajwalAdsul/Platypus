@@ -37,7 +37,7 @@ export default class UserSignIn extends React.Component {
 			secret_key : this.state.secret_key
 		};
 		var res;
-		await axios.post('http://' + this.state.secret_key + '.ngrok.io/' + 'isValid', data)
+		await axios.post('https://' + this.state.secret_key + '.ngrok.io/' + 'isValid', data)
 		.then(response => {
 			console.log(response);
 			res = response.status;

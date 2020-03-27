@@ -18,6 +18,9 @@ export default class Space extends Component {
     componentDidMount() {   
     }
 	render() {
+     if(localStorage.getItem('session') != "start"){
+        return <Redirect push to = "/Login" />;
+      }
 		return (
 			<div> 
       <SHeader/>

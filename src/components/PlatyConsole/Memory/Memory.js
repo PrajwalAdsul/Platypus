@@ -30,7 +30,7 @@ export default class Memory extends Component {
   }
 
     componentDidMount() {
-        axios.get('http://localhost:5000/memory')
+        axios.get('http://' + localStorage.getItem('secret_key') + '.ngrok.io/' + 'memory')
             .then(response => {
                 this.setState({
                     allProcesses : response.data
@@ -52,6 +52,9 @@ export default class Memory extends Component {
     }
 
 	render() {
+     if(localStorage.getItem('session') != "start"){
+        return <Redirect push to = "/Login" />;
+      }
 		return (
 			<div>
       <SHeader/>

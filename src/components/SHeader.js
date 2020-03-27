@@ -4,7 +4,7 @@ import classNames from 'classnames';
 import Error from '../elements/Error';
 import { REGISTRATION_FIELDS, REGISTRATION_MESSAGE, COMMON_FIELDS, ERROR_IN_REGISTRATION } from '../MessageBundle';
 import axios from 'axios';
-
+import Logout from './Logout';
 export default class Header extends Component {
 	constructor(props) {
 		super(props);
@@ -25,7 +25,7 @@ export default class Header extends Component {
             <Link to="/PlatyConsole" className='nav-item nav-link'>PlatyConsole</Link>	
             <Link to="/PlatyDetect" className='nav-item nav-link'>PlatyDetect</Link>	
             <Link to="/PlatyReal" className='nav-item nav-link'>PlatyReal</Link>	
-            	
+            <Logout />	
             </div>
 			</h2>
 			</nav>			

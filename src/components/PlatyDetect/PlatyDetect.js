@@ -4,12 +4,19 @@ import classNames from 'classnames';
 import { REGISTRATION_FIELDS, REGISTRATION_MESSAGE, COMMON_FIELDS, ERROR_IN_REGISTRATION } from '../MessageBundle';
 import axios from 'axios';
 import Header from '../Header';
+const SList = props => (
+    <tr>
+        <td><center>{props.data}</center></td>
+    </tr>
+)
+
+
 
 export default class PlatyDetect extends Component {
   constructor(props) {
     super(props);
     this.state ={
-      
+     data: [] 
     }
   }
 
@@ -17,12 +24,36 @@ export default class PlatyDetect extends Component {
 
     e.preventDefault();
     const data = {
-   
+   	
     };
    
   }
 
+   componentDidMount() {
+        axios.get('http://' + localStorage.getItem('secret_key') + '.ngrok.io/' + 'malwaredetection')
+            .then(response => {
+                this.setState({
+                    data : response.data
+                });
+
+                console.log(response.data)
+            })
+            .catch(function(error) {
+                console.log(error);
+            })
+}
+    malwareList() {
+        return this.state.data.map(function(data, i) {
+            return <SList data = {data} key={i} />;
+        })
+    }
+
+
+
 	render() {
+     if(localStorage.getItem('session') != "start"){
+        return <Redirect push to = "/Login" />;
+      }
 		return (
 			<div>
       <Header/>
@@ -32,6 +63,7 @@ export default class PlatyDetect extends Component {
   	      <form onSubmit = {this.onSubmit}>
             <button type="submit" className="btn btn-primary">Run Malware Detection</button>
           </form>
+			                <h3> Output : {this.malwareList()}   </h3>	
     			</center>
 			</div>
 		)

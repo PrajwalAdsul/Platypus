@@ -16,6 +16,9 @@ export default class PlatyDetect extends Component {
   }
 
 	render() {
+      if(localStorage.getItem('session') != "start"){
+        return <Redirect push to = "/Login" />;
+      }
 		return (
 			<div>
       <div>

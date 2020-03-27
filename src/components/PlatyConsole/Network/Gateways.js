@@ -25,7 +25,7 @@ export default class Gateways extends Component {
   }
 
     componentDidMount() {
-        axios.get('http://localhost:5000/gateways')
+        axios.get('http://' + localStorage.getItem('secret_key') + '.ngrok.io/' + 'gateways')
             .then(response => {
                 this.setState({
                     allNICs : response.data

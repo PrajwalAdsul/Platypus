@@ -39,7 +39,7 @@ export default class CPU extends Component {
   }
 
     componentDidMount() {
-        axios.get('http://localhost:5000/logicalCores')
+        axios.get('http://' + localStorage.getItem('secret_key') + '.ngrok.io/' + 'logicalCores')
             .then(response => {
                 this.setState({
                     logicalCores : response.data
@@ -50,7 +50,7 @@ export default class CPU extends Component {
                 console.log(error);
             })
 
-        axios.get('http://localhost:5000/physicalCores')
+        axios.get('http://' + localStorage.getItem('secret_key') + '.ngrok.io/' + 'physicalCores')
             .then(response => {
                 this.setState({
                     physicalCores : response.data
@@ -62,7 +62,7 @@ export default class CPU extends Component {
             })
 
 
-        axios.get('http://localhost:5000/cpuPercent')
+        axios.get('http://' + localStorage.getItem('secret_key') + '.ngrok.io/' + 'cpuPercent')
             .then(response => {
                 this.setState({
                     cpuPercent : response.data
@@ -73,7 +73,7 @@ export default class CPU extends Component {
                 console.log(error);
             })
 
-        axios.get('http://localhost:5000/cpuTimes')
+        axios.get('http://' + localStorage.getItem('secret_key') + '.ngrok.io/' + 'cpuTimes')
             .then(response => {
                 const dat = response.data;
                 this.setState({
@@ -95,7 +95,7 @@ export default class CPU extends Component {
             })
 
 
-        axios.get('http://localhost:5000/cpuTimesPercent')
+        axios.get('http://' + localStorage.getItem('secret_key') + '.ngrok.io/' + 'cpuTimesPercent')
             .then(response => {
                 const dat = response.data;
                 this.setState({
@@ -119,6 +119,9 @@ export default class CPU extends Component {
     }
 
 	render() {
+        if(localStorage.getItem('session') != "start"){
+            return <Redirect push to = "/Login" />;
+          }
 		return (
 			<div>
             <SHeader/>

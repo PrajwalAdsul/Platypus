@@ -11,6 +11,9 @@ import Header from '../Header';
 
 export default class PlatyShare extends Component {
 	render() {
+	 if(localStorage.getItem('session') != "start"){
+        return <Redirect push to = "/Login" />;
+      }
 		return (
 			<div>
 				<Header/>

@@ -36,7 +36,7 @@ export default class AddressForAllInterfaces extends Component {
 
     componentDidMount() {
         
-        axios.get('http://localhost:5000/interfaces')
+        axios.get('http://' + localStorage.getItem('secret_key') + '.ngrok.io/' + 'interfaces')
             .then(response => {
                 this.setState({
                     interfaces : response.data
@@ -46,7 +46,7 @@ export default class AddressForAllInterfaces extends Component {
                 console.log(error);
             })
 
-        axios.get('http://localhost:5000/addressForAllInterfaces')
+        axios.get('http://' + localStorage.getItem('secret_key') + '.ngrok.io/' + 'addressForAllInterfaces')
             .then(response => {
                 this.setState({
                     addrs : response.data

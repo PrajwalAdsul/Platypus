@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "1732fae4cb3fcfbfb07b761738ddcab3",
+    "revision": "440a2671b4b1f8977afe3c62fa38abd5",
     "url": "/Platypus/index.html"
   },
   {
-    "revision": "aa7a89f37c2bf5a2057a",
-    "url": "/Platypus/static/css/2.d482c13e.chunk.css"
+    "revision": "6bc850767281e749f2cf",
+    "url": "/Platypus/static/css/2.452476cc.chunk.css"
   },
   {
-    "revision": "7db4d47ea6793f18de52",
+    "revision": "5768a79fb9e1065693b6",
     "url": "/Platypus/static/css/main.3f3a5dcc.chunk.css"
   },
   {
-    "revision": "aa7a89f37c2bf5a2057a",
-    "url": "/Platypus/static/js/2.4975cc53.chunk.js"
+    "revision": "6bc850767281e749f2cf",
+    "url": "/Platypus/static/js/2.01d136f5.chunk.js"
   },
   {
-    "revision": "a23749f5bc14f6a5b5c1b0c17e40dd53",
-    "url": "/Platypus/static/js/2.4975cc53.chunk.js.LICENSE.txt"
+    "revision": "1711895b9e23dda459dc99ce92ddb8d3",
+    "url": "/Platypus/static/js/2.01d136f5.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "7db4d47ea6793f18de52",
-    "url": "/Platypus/static/js/main.82089e34.chunk.js"
+    "revision": "5768a79fb9e1065693b6",
+    "url": "/Platypus/static/js/main.826544c2.chunk.js"
   },
   {
     "revision": "167a2f166cb25b63ab93",

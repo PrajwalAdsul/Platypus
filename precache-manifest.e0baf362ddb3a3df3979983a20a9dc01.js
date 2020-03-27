@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "fc236de555dd084a0ab0f30ce70c8be1",
+    "revision": "5db1ca21a33a1725d3ed5e40ce887e56",
     "url": "/Platypus/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Platypus/static/css/2.452476cc.chunk.css"
   },
   {
-    "revision": "4bb6178375c4a5033b36",
+    "revision": "cd5078026926117add6d",
     "url": "/Platypus/static/css/main.3f3a5dcc.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Platypus/static/js/2.01d136f5.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "4bb6178375c4a5033b36",
-    "url": "/Platypus/static/js/main.648ea31f.chunk.js"
+    "revision": "cd5078026926117add6d",
+    "url": "/Platypus/static/js/main.4b676c9d.chunk.js"
   },
   {
     "revision": "167a2f166cb25b63ab93",
